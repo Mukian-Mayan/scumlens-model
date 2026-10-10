@@ -1,0 +1,99 @@
+{
+ "lang": "ar",
+ "verdicts": {
+  "low_risk": "خطر منخفض",
+  "suspicious": "مشبوه",
+  "dangerous": "خطير"
+ },
+ "findings": {
+  "ip_host": {
+   "title": "الرابط يستخدم عنوان IP مباشر"
+  },
+  "at_symbol": {
+   "title": "حيلة '@' مخفية في الرابط"
+  },
+  "brand_impersonation": {
+   "title": "ينتحل علامة تجارية معروفة"
+  },
+  "free_host": {
+   "title": "مستضاف على موقع مجاني"
+  },
+  "shortener": {
+   "title": "رابط مختصر يخفي الوجهة"
+  },
+  "risky_tld": {
+   "title": "امتداد نطاق رخيص كثير الإساءة"
+  },
+  "lookalike_chars": {
+   "title": "أحرف مشابهة للتضليل"
+  },
+  "many_subdomains": {
+   "title": "سلسلة نطاقات فرعية غير معتادة"
+  },
+  "scam_keywords": {
+   "title": "يحتوي كلمات احتيال كثيرة"
+  },
+  "risky_download": {
+   "title": "الرابط يؤدي إلى ملف خطير"
+  },
+  "no_https": {
+   "title": "اتصال غير مشفّر (بدون HTTPS)"
+  },
+  "very_long_url": {
+   "title": "رابط طويل ومزدحم"
+  },
+  "redirect_param": {
+   "title": "الرابط يحتوي رابطًا آخر"
+  },
+  "odd_port": {
+   "title": "منفذ شبكة غير معتاد"
+  },
+  "mobile_money_scam": {
+   "title": "صياغة احتيال المحافظ المالية"
+  },
+  "loan_scam": {
+   "title": "قرض مزيّف برسوم مسبقة"
+  },
+  "job_scam": {
+   "title": "وظيفة تطلب منك الدفع"
+  },
+  "investment_scam": {
+   "title": "أرباح مضمونة أو مضاعفة"
+  },
+  "prize_scam": {
+   "title": "جائزة أو سحب وهمي"
+  },
+  "urgency_pressure": {
+   "title": "ضغط للتصرف فورًا"
+  },
+  "fake_system_alert": {
+   "title": "تنبيه وهمي 'هاتفك مصاب'"
+  },
+  "credential_request": {
+   "title": "يطلب PIN أو كلمة المرور أو رمز OTP"
+  },
+  "advance_fee": {
+   "title": "نمط دفع رسوم للاستلام"
+  },
+  "impersonated_authority": {
+   "title": "ينتحل جهة رسمية أو مزوّد خدمة"
+  },
+  "wa_takeover_lure": {
+   "title": "فخ للاستيلاء على حساب واتساب"
+  },
+  "wa_fake_app": {
+   "title": "واتساب مزيّف أو معدّل"
+  },
+  "wa_deeplink_abuse": {
+   "title": "رابط واتساب مشبوه"
+  },
+  "wa_group_promo": {
+   "title": "مجموعة تعد بأرباح مالية"
+  }
+ },
+ "ui": {
+  "why_flagged": "لماذا تم التنبيه؟",
+  "what_to_do": "ماذا تفعل"
+ },
+ "_note": "Machine-drafted titles; have a native speaker review before release. Missing keys fall back to English."
+}

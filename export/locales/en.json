@@ -1,0 +1,428 @@
+{
+ "lang": "en",
+ "categories": {
+  "url": "Link",
+  "regional_scam": "Local scam pattern",
+  "lure": "Social-engineering lure",
+  "ad_clickthrough": "Malicious ad / click-through",
+  "phishing": "Phishing",
+  "whatsapp": "WhatsApp / Meta",
+  "api_sniff": "Suspicious page behaviour (API)",
+  "file": "File",
+  "handshake": "Sign-in / handshake",
+  "app": "App",
+  "hardware": "Hardware"
+ },
+ "verdicts": {
+  "low_risk": "Low risk",
+  "suspicious": "Suspicious",
+  "dangerous": "Dangerous"
+ },
+ "findings": {
+  "ip_host": {
+   "title": "Link uses a raw IP address",
+   "why": "Real businesses use names, not numbers. Scam pages often hide behind bare IP addresses.",
+   "tip": "Do not enter any details. Ask the sender for the official website name."
+  },
+  "at_symbol": {
+   "title": "Hidden '@' trick in the link",
+   "why": "Everything before '@' is ignored by the browser, so the real destination is what comes after it.",
+   "tip": "Do not open it. Type the official address yourself."
+  },
+  "brand_impersonation": {
+   "title": "Pretends to be a well-known brand",
+   "why": "A famous brand name appears in the link but the site does not belong to that brand.",
+   "tip": "Go to the brand's official app or website directly instead."
+  },
+  "free_host": {
+   "title": "Hosted on a free site-builder",
+   "why": "Free hosting is cheap to create and throw away, so scammers use it often.",
+   "tip": "Be extra careful before logging in or paying."
+  },
+  "shortener": {
+   "title": "Shortened link hides the destination",
+   "why": "Short links stop you from seeing where you will land.",
+   "tip": "Preview the link first or ask for the full address."
+  },
+  "risky_tld": {
+   "title": "Cheap, high-abuse domain ending",
+   "why": "Some endings (.xyz, .top, .tk ...) are heavily used by scam sites.",
+   "tip": "Treat unknown sites with this ending as untrusted."
+  },
+  "lookalike_chars": {
+   "title": "Look-alike characters in the name",
+   "why": "Letters swapped for similar-looking numbers or foreign letters mimic a real name.",
+   "tip": "Check the spelling letter by letter."
+  },
+  "many_subdomains": {
+   "title": "Unusually long chain of sub-names",
+   "why": "Scammers stack words before the real domain to make it look official.",
+   "tip": "Read the link from right to left: the real site is just before the first '/'."
+  },
+  "scam_keywords": {
+   "title": "Contains many scam trigger words",
+   "why": "Words such as verify, claim, bonus, loan or login together are typical of lures.",
+   "tip": "Pause. Ask whether you expected this message."
+  },
+  "risky_download": {
+   "title": "Link leads to a risky file",
+   "why": "Installers or archives from a web link can carry malware.",
+   "tip": "Only install apps from your official app store."
+  },
+  "no_https": {
+   "title": "Connection is not encrypted",
+   "why": "Anything typed on this page can be read on the way.",
+   "tip": "Never enter passwords, PINs or card details here."
+  },
+  "very_long_url": {
+   "title": "Very long, cluttered link",
+   "why": "Long links can bury the real destination or tracking/redirect data.",
+   "tip": "Look at the part just before the first '/'."
+  },
+  "redirect_param": {
+   "title": "Link carries another link inside it",
+   "why": "It may bounce you to a different, hidden site.",
+   "tip": "Do not trust the first name you see; check the final page address."
+  },
+  "odd_port": {
+   "title": "Uses an unusual network port",
+   "why": "Legitimate public sites almost always use the standard ports.",
+   "tip": "Avoid entering information."
+  },
+  "mobile_money_scam": {
+   "title": "Mobile-money scam wording",
+   "why": "'Sent by mistake', 'reversal' or 'account blocked' messages are classic mobile-money tricks.",
+   "tip": "Check your balance in your own app/USSD. Never send money back on request."
+  },
+  "loan_scam": {
+   "title": "Fake or advance-fee loan offer",
+   "why": "Real lenders do not ask for an upfront 'processing' or 'insurance' fee before paying out.",
+   "tip": "Do not pay any fee to receive a loan. Verify the lender with the regulator."
+  },
+  "job_scam": {
+   "title": "Job offer that asks you to pay",
+   "why": "Genuine employers do not charge for visas, medicals or registration.",
+   "tip": "Verify the employer and the recruiter licence before paying anything."
+  },
+  "investment_scam": {
+   "title": "Guaranteed or doubled returns",
+   "why": "No honest investment can guarantee profit or double money quickly.",
+   "tip": "Walk away. Check the firm is licensed by your financial regulator."
+  },
+  "prize_scam": {
+   "title": "'You won' prize or giveaway",
+   "why": "Unexpected prizes are bait to collect your details or a 'fee'.",
+   "tip": "You cannot win a contest you did not enter. Ignore it."
+  },
+  "urgency_pressure": {
+   "title": "Pressure to act immediately",
+   "why": "Scammers rush you so you do not think or ask anyone.",
+   "tip": "Slow down. Call the organisation on its official number."
+  },
+  "fake_system_alert": {
+   "title": "Fake 'your phone is infected' alert",
+   "why": "Real phones do not show virus warnings inside a web page.",
+   "tip": "Close the tab. Do not install anything it offers."
+  },
+  "credential_request": {
+   "title": "Asks for PIN, password or OTP",
+   "why": "No genuine service asks you to share a PIN or one-time code.",
+   "tip": "Never share codes. Contact the provider through its official app."
+  },
+  "advance_fee": {
+   "title": "Advance-fee (pay-to-receive) pattern",
+   "why": "You are asked to pay a small fee to release a large sum or parcel.",
+   "tip": "Do not pay. The 'big payout' does not exist."
+  },
+  "impersonated_authority": {
+   "title": "Impersonates an authority or provider",
+   "why": "Tax, police or telecom names are used to frighten you into acting.",
+   "tip": "Contact the real agency using the number on its official site."
+  },
+  "wa_takeover_lure": {
+   "title": "WhatsApp account-takeover lure",
+   "why": "Asking for your 6-digit code or a 'linked device' QR scan hands your WhatsApp to the attacker.",
+   "tip": "Never share your WhatsApp code or scan QR codes from messages. Enable two-step verification."
+  },
+  "wa_fake_app": {
+   "title": "Fake / modified WhatsApp download",
+   "why": "Modded apps (GB, Plus, Gold...) can steal chats and take over the account.",
+   "tip": "Install WhatsApp only from the official store."
+  },
+  "wa_deeplink_abuse": {
+   "title": "Suspicious WhatsApp deep link",
+   "why": "The link pre-fills a message or opens a device-link flow you did not ask for.",
+   "tip": "Read the pre-filled text before sending anything."
+  },
+  "wa_group_promo": {
+   "title": "Group invite tied to money promises",
+   "why": "Investment/giveaway groups are used to recruit victims.",
+   "tip": "Do not join groups that promise income."
+  },
+  "exfil_telegram_bot": {
+   "title": "Page sends data to a Telegram bot",
+   "why": "Phishing kits commonly forward typed passwords to a criminal's Telegram bot.",
+   "tip": "Leave the page. Never type anything."
+  },
+  "exfil_discord_webhook": {
+   "title": "Page sends data to a Discord webhook",
+   "why": "Stolen details are often posted to a private Discord channel.",
+   "tip": "Leave the page."
+  },
+  "exfil_form_service": {
+   "title": "Form data goes to a third-party collector",
+   "why": "Free form collectors are used to harvest details without a real backend.",
+   "tip": "Do not submit sensitive details."
+  },
+  "clipboard_read": {
+   "title": "Page tries to read your clipboard",
+   "why": "It could grab copied passwords, addresses or codes.",
+   "tip": "Deny clipboard permission."
+  },
+  "clipboard_write_hijack": {
+   "title": "Page silently changes what you copy",
+   "why": "Can swap a wallet address or paste a malicious command.",
+   "tip": "Check pasted text before using it."
+  },
+  "camera_mic_request": {
+   "title": "Page asks for camera / microphone",
+   "why": "Few pages need this; scam pages use it for ID capture or spying.",
+   "tip": "Deny unless you started a video call."
+  },
+  "geolocation_request": {
+   "title": "Page asks for your location",
+   "why": "Used for profiling and targeting.",
+   "tip": "Deny unless the service needs it."
+  },
+  "notification_spam": {
+   "title": "Pushes browser notifications",
+   "why": "Allowing it lets the site send scam ads to your lock screen.",
+   "tip": "Tap 'Block'."
+  },
+  "obfuscated_js": {
+   "title": "Hidden / scrambled script code",
+   "why": "Scrambled code is used to conceal what the page really does.",
+   "tip": "Treat the page as unsafe."
+  },
+  "forced_redirect": {
+   "title": "Page forces a redirect",
+   "why": "Automatic jumps send you to ad or scam pages.",
+   "tip": "Close the tab."
+  },
+  "popup_loop": {
+   "title": "Endless pop-ups or back-button trap",
+   "why": "The page tries to keep you trapped and clicking.",
+   "tip": "Close the tab; clear the site data."
+  },
+  "hidden_iframe": {
+   "title": "Invisible frame inside the page",
+   "why": "Hidden frames can load tracking or malicious content.",
+   "tip": "Leave the page."
+  },
+  "app_intent_scheme": {
+   "title": "Page tries to open an app / call / SMS",
+   "why": "It may push you to install an app or send a message.",
+   "tip": "Do not allow the prompt."
+  },
+  "ws_ip_connection": {
+   "title": "Page opens a live link to a raw IP",
+   "why": "Real services use named servers.",
+   "tip": "Leave the page."
+  },
+  "credential_form_fake_brand": {
+   "title": "Login box on a page imitating a brand",
+   "why": "A password form plus a big brand name on a site that is not theirs is phishing.",
+   "tip": "Do not log in here."
+  },
+  "external_form_submit": {
+   "title": "Form sends data to a different website",
+   "why": "What you type goes to someone other than the site you see.",
+   "tip": "Do not submit."
+  },
+  "password_form_no_https": {
+   "title": "Password asked over an insecure connection",
+   "why": "The password travels unencrypted.",
+   "tip": "Do not log in."
+  },
+  "file_critical_ext": {
+   "title": "Executable / installer file",
+   "why": "Such files can run code on your device.",
+   "tip": "Do not open unless you requested it from a trusted source."
+  },
+  "file_macro_doc": {
+   "title": "Office document with macros",
+   "why": "Macros are a common way to run malware.",
+   "tip": "Do not enable macros."
+  },
+  "file_archive": {
+   "title": "Compressed archive",
+   "why": "Archives can hide dangerous files inside.",
+   "tip": "Scan before opening."
+  },
+  "file_double_ext": {
+   "title": "Disguised double extension",
+   "why": "'invoice.pdf.exe' looks like a document but is a program.",
+   "tip": "Delete it."
+  },
+  "file_rtl_override": {
+   "title": "Hidden right-to-left trick in file name",
+   "why": "Reverses part of the name so a program looks like a picture.",
+   "tip": "Delete it."
+  },
+  "file_unknown_ext": {
+   "title": "Unusual or missing file type",
+   "why": "Unknown types cannot be checked and may be a disguise.",
+   "tip": "Do not open it."
+  },
+  "oauth_broad_scope": {
+   "title": "Sign-in asks for very broad access",
+   "why": "Reading mail or all files lets an app act as you without your password.",
+   "tip": "Deny unless you know the app."
+  },
+  "oauth_implicit_token": {
+   "title": "Sign-in hands a token straight to the page",
+   "why": "Tokens in the link can be leaked or stolen.",
+   "tip": "Avoid unfamiliar apps."
+  },
+  "oauth_redirect_mismatch": {
+   "title": "Sign-in returns you to a different site",
+   "why": "Your approval is sent to a site unrelated to the app.",
+   "tip": "Cancel the sign-in."
+  },
+  "device_code_lure": {
+   "title": "'Enter this code' device-login lure",
+   "why": "Attackers ask victims to type a code on a real login page to take over the account.",
+   "tip": "Never enter a code you did not generate yourself."
+  },
+  "app_perm_bind_accessibility_service": {
+   "title": "Can watch and control your screen",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_bind_device_admin": {
+   "title": "Asks to become a device admin (hard to remove)",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_system_alert_window": {
+   "title": "Can draw over other apps (fake login screens)",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_request_install_packages": {
+   "title": "Can install other apps",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_read_sms": {
+   "title": "Can read your SMS (OTP codes)",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_receive_sms": {
+   "title": "Intercepts incoming SMS",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_send_sms": {
+   "title": "Can send SMS (premium charges)",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_read_call_log": {
+   "title": "Reads your call history",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_read_contacts": {
+   "title": "Reads your contacts",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_manage_external_storage": {
+   "title": "Full access to all files",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_bind_notification_listener_service": {
+   "title": "Reads all notifications (incl. OTPs)",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_query_all_packages": {
+   "title": "Sees every app you have installed",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_record_audio": {
+   "title": "Can record audio",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_bind_vpn_service": {
+   "title": "Can route your traffic through itself",
+   "why": "Powerful permission that banking trojans and stalkerware rely on.",
+   "tip": "Only grant to apps that clearly need it; uninstall if unsure."
+  },
+  "app_perm_combo_sms_overlay": {
+   "title": "Reads SMS and draws over apps",
+   "why": "Classic OTP-stealing banker-trojan combination.",
+   "tip": "Uninstall."
+  },
+  "app_perm_combo_accessibility_overlay": {
+   "title": "Controls screen and draws over apps",
+   "why": "Lets malware tap buttons and show fake screens.",
+   "tip": "Uninstall immediately."
+  },
+  "app_perm_combo_otp_stealer": {
+   "title": "SMS + contacts + internet",
+   "why": "Can spread by SMS and leak codes.",
+   "tip": "Uninstall."
+  },
+  "app_sideloaded": {
+   "title": "Installed outside an official store",
+   "why": "No store review was applied.",
+   "tip": "Reinstall from the official store or remove."
+  },
+  "usb_hid_on_cable": {
+   "title": "Charging accessory acts like a keyboard",
+   "why": "Malicious cables inject keystrokes (BadUSB / implant cables).",
+   "tip": "Unplug immediately."
+  },
+  "usb_composite_hid_storage": {
+   "title": "Device is keyboard + storage at once",
+   "why": "Typical of attack tools disguised as flash drives.",
+   "tip": "Unplug; do not open files."
+  },
+  "usb_unexpected_network": {
+   "title": "Accessory exposes a network/serial port",
+   "why": "It can silently exfiltrate data.",
+   "tip": "Unplug; use your own cable."
+  },
+  "known_bad_host": {
+   "title": "Listed in a phishing database",
+   "why": "This exact website address was reported in a public phishing/scam feed.",
+   "tip": "Do not open it. Close the page."
+  },
+  "new_domain": {
+   "title": "Website registered very recently",
+   "why": "Scam sites are usually only days or weeks old.",
+   "tip": "Be extra careful; do not pay or log in."
+  },
+  "bad_tls": {
+   "title": "Security certificate is invalid or missing",
+   "why": "The padlock check failed, so the site cannot prove who it is.",
+   "tip": "Do not enter any details."
+  },
+  "many_redirects": {
+   "title": "Bounced through several websites",
+   "why": "Long redirect chains are used to hide the final scam page.",
+   "tip": "Check the address on the final page."
+  }
+ },
+ "ui": {
+  "why_flagged": "Why was this flagged?",
+  "what_to_do": "What to do",
+  "trusted_domain": "Well-known, widely used website"
+ }
+}

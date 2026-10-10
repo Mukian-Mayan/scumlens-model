@@ -1,0 +1,99 @@
+{
+ "lang": "sw",
+ "verdicts": {
+  "low_risk": "Hatari ndogo",
+  "suspicious": "Ya kutia shaka",
+  "dangerous": "Hatari"
+ },
+ "findings": {
+  "ip_host": {
+   "title": "Kiungo kina anwani ya IP tupu"
+  },
+  "at_symbol": {
+   "title": "Hila ya '@' kwenye kiungo"
+  },
+  "brand_impersonation": {
+   "title": "Inajifanya kuwa chapa maarufu"
+  },
+  "free_host": {
+   "title": "Imehifadhiwa kwenye tovuti ya bure"
+  },
+  "shortener": {
+   "title": "Kiungo kifupi kinaficha mwisho"
+  },
+  "risky_tld": {
+   "title": "Kikoa cha bei nafuu chenye matumizi mabaya mengi"
+  },
+  "lookalike_chars": {
+   "title": "Herufi zinazofanana zimetumika"
+  },
+  "many_subdomains": {
+   "title": "Majina mengi ya ziada kabla ya kikoa"
+  },
+  "scam_keywords": {
+   "title": "Ina maneno mengi ya ulaghai"
+  },
+  "risky_download": {
+   "title": "Kiungo kinaelekeza kwenye faili hatari"
+  },
+  "no_https": {
+   "title": "Muunganisho haujasimbwa (si HTTPS)"
+  },
+  "very_long_url": {
+   "title": "Kiungo kirefu mno"
+  },
+  "redirect_param": {
+   "title": "Kiungo kina kiungo kingine ndani"
+  },
+  "odd_port": {
+   "title": "Inatumia mlango wa mtandao usio wa kawaida"
+  },
+  "mobile_money_scam": {
+   "title": "Maneno ya ulaghai wa pesa za simu"
+  },
+  "loan_scam": {
+   "title": "Mkopo bandia wa kulipia ada kwanza"
+  },
+  "job_scam": {
+   "title": "Kazi inayokutaka ulipe"
+  },
+  "investment_scam": {
+   "title": "Ahadi ya faida iliyohakikishwa/mara mbili"
+  },
+  "prize_scam": {
+   "title": "Zawadi ya 'umeshinda'"
+  },
+  "urgency_pressure": {
+   "title": "Shinikizo la kufanya haraka"
+  },
+  "fake_system_alert": {
+   "title": "Tahadhari bandia ya 'simu yako ina virusi'"
+  },
+  "credential_request": {
+   "title": "Inaomba PIN, nenosiri au OTP"
+  },
+  "advance_fee": {
+   "title": "Mtindo wa kulipa ili kupokea"
+  },
+  "impersonated_authority": {
+   "title": "Inajifanya mamlaka au mtoa huduma"
+  },
+  "wa_takeover_lure": {
+   "title": "Mtego wa kuchukua akaunti ya WhatsApp"
+  },
+  "wa_fake_app": {
+   "title": "WhatsApp bandia / iliyobadilishwa"
+  },
+  "wa_deeplink_abuse": {
+   "title": "Kiungo cha WhatsApp cha kutia shaka"
+  },
+  "wa_group_promo": {
+   "title": "Kikundi kinachoahidi pesa"
+  }
+ },
+ "ui": {
+  "why_flagged": "Kwa nini imetiwa alama?",
+  "what_to_do": "Cha kufanya"
+ },
+ "_note": "Machine-drafted titles; have a native speaker review before release. Missing keys fall back to English."
+}

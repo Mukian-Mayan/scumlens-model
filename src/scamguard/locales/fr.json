@@ -1,0 +1,99 @@
+{
+ "lang": "fr",
+ "verdicts": {
+  "low_risk": "Risque faible",
+  "suspicious": "Suspect",
+  "dangerous": "Dangereux"
+ },
+ "findings": {
+  "ip_host": {
+   "title": "Le lien utilise une adresse IP brute"
+  },
+  "at_symbol": {
+   "title": "Astuce '@' cachée dans le lien"
+  },
+  "brand_impersonation": {
+   "title": "Se fait passer pour une marque connue"
+  },
+  "free_host": {
+   "title": "Hébergé sur un site gratuit"
+  },
+  "shortener": {
+   "title": "Lien raccourci qui masque la destination"
+  },
+  "risky_tld": {
+   "title": "Extension de domaine bon marché très abusée"
+  },
+  "lookalike_chars": {
+   "title": "Caractères trompeurs (look-alike)"
+  },
+  "many_subdomains": {
+   "title": "Chaîne de sous-domaines inhabituelle"
+  },
+  "scam_keywords": {
+   "title": "Contient de nombreux mots d'arnaque"
+  },
+  "risky_download": {
+   "title": "Le lien mène à un fichier risqué"
+  },
+  "no_https": {
+   "title": "Connexion non chiffrée (pas de HTTPS)"
+  },
+  "very_long_url": {
+   "title": "Lien très long et encombré"
+  },
+  "redirect_param": {
+   "title": "Le lien contient un autre lien"
+  },
+  "odd_port": {
+   "title": "Port réseau inhabituel"
+  },
+  "mobile_money_scam": {
+   "title": "Formulation d'arnaque au mobile money"
+  },
+  "loan_scam": {
+   "title": "Faux prêt avec frais à payer d'avance"
+  },
+  "job_scam": {
+   "title": "Offre d'emploi qui demande de payer"
+  },
+  "investment_scam": {
+   "title": "Rendements garantis ou doublés"
+  },
+  "prize_scam": {
+   "title": "Faux gain / cadeau"
+  },
+  "urgency_pressure": {
+   "title": "Pression pour agir tout de suite"
+  },
+  "fake_system_alert": {
+   "title": "Fausse alerte « téléphone infecté »"
+  },
+  "credential_request": {
+   "title": "Demande PIN, mot de passe ou code OTP"
+  },
+  "advance_fee": {
+   "title": "Schéma de frais d'avance"
+  },
+  "impersonated_authority": {
+   "title": "Usurpe une autorité ou un opérateur"
+  },
+  "wa_takeover_lure": {
+   "title": "Piège de prise de contrôle WhatsApp"
+  },
+  "wa_fake_app": {
+   "title": "Faux WhatsApp / version modifiée"
+  },
+  "wa_deeplink_abuse": {
+   "title": "Lien WhatsApp suspect"
+  },
+  "wa_group_promo": {
+   "title": "Groupe lié à des promesses d'argent"
+  }
+ },
+ "ui": {
+  "why_flagged": "Pourquoi cette alerte ?",
+  "what_to_do": "Que faire"
+ },
+ "_note": "Machine-drafted titles; have a native speaker review before release. Missing keys fall back to English."
+}

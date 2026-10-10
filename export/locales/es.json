@@ -1,0 +1,99 @@
+{
+ "lang": "es",
+ "verdicts": {
+  "low_risk": "Riesgo bajo",
+  "suspicious": "Sospechoso",
+  "dangerous": "Peligroso"
+ },
+ "findings": {
+  "ip_host": {
+   "title": "El enlace usa una dirección IP directa"
+  },
+  "at_symbol": {
+   "title": "Truco oculto con '@' en el enlace"
+  },
+  "brand_impersonation": {
+   "title": "Se hace pasar por una marca conocida"
+  },
+  "free_host": {
+   "title": "Alojado en un sitio gratuito"
+  },
+  "shortener": {
+   "title": "Enlace acortado que oculta el destino"
+  },
+  "risky_tld": {
+   "title": "Dominio barato muy usado en abusos"
+  },
+  "lookalike_chars": {
+   "title": "Caracteres parecidos para engañar"
+  },
+  "many_subdomains": {
+   "title": "Cadena inusual de subdominios"
+  },
+  "scam_keywords": {
+   "title": "Contiene muchas palabras típicas de estafa"
+  },
+  "risky_download": {
+   "title": "El enlace lleva a un archivo riesgoso"
+  },
+  "no_https": {
+   "title": "Conexión sin cifrar (sin HTTPS)"
+  },
+  "very_long_url": {
+   "title": "Enlace muy largo y confuso"
+  },
+  "redirect_param": {
+   "title": "El enlace contiene otro enlace"
+  },
+  "odd_port": {
+   "title": "Puerto de red inusual"
+  },
+  "mobile_money_scam": {
+   "title": "Texto típico de estafa de dinero móvil"
+  },
+  "loan_scam": {
+   "title": "Préstamo falso con pago anticipado"
+  },
+  "job_scam": {
+   "title": "Oferta de empleo que pide pagar"
+  },
+  "investment_scam": {
+   "title": "Ganancias garantizadas o duplicadas"
+  },
+  "prize_scam": {
+   "title": "Falso premio o sorteo"
+  },
+  "urgency_pressure": {
+   "title": "Presión para actuar ya"
+  },
+  "fake_system_alert": {
+   "title": "Falsa alerta de 'teléfono infectado'"
+  },
+  "credential_request": {
+   "title": "Pide PIN, contraseña u OTP"
+  },
+  "advance_fee": {
+   "title": "Patrón de pago por adelantado"
+  },
+  "impersonated_authority": {
+   "title": "Suplanta a una autoridad o proveedor"
+  },
+  "wa_takeover_lure": {
+   "title": "Trampa para robar tu cuenta de WhatsApp"
+  },
+  "wa_fake_app": {
+   "title": "WhatsApp falso o modificado"
+  },
+  "wa_deeplink_abuse": {
+   "title": "Enlace de WhatsApp sospechoso"
+  },
+  "wa_group_promo": {
+   "title": "Grupo con promesas de dinero"
+  }
+ },
+ "ui": {
+  "why_flagged": "¿Por qué se marcó?",
+  "what_to_do": "Qué hacer"
+ },
+ "_note": "Machine-drafted titles; have a native speaker review before release. Missing keys fall back to English."
+}

@@ -1,0 +1,99 @@
+{
+ "lang": "zh",
+ "verdicts": {
+  "low_risk": "低风险",
+  "suspicious": "可疑",
+  "dangerous": "危险"
+ },
+ "findings": {
+  "ip_host": {
+   "title": "链接使用裸IP地址"
+  },
+  "at_symbol": {
+   "title": "链接中隐藏的“@”伎俩"
+  },
+  "brand_impersonation": {
+   "title": "冒充知名品牌"
+  },
+  "free_host": {
+   "title": "托管在免费建站平台"
+  },
+  "shortener": {
+   "title": "短链接隐藏了真实地址"
+  },
+  "risky_tld": {
+   "title": "滥用率很高的廉价域名后缀"
+  },
+  "lookalike_chars": {
+   "title": "使用形似字符迷惑"
+  },
+  "many_subdomains": {
+   "title": "子域名层级异常多"
+  },
+  "scam_keywords": {
+   "title": "包含大量诈骗常用词"
+  },
+  "risky_download": {
+   "title": "链接指向有风险的文件"
+  },
+  "no_https": {
+   "title": "连接未加密（无HTTPS）"
+  },
+  "very_long_url": {
+   "title": "链接过长且杂乱"
+  },
+  "redirect_param": {
+   "title": "链接内嵌另一个链接"
+  },
+  "odd_port": {
+   "title": "使用不常见的网络端口"
+  },
+  "mobile_money_scam": {
+   "title": "移动支付诈骗话术"
+  },
+  "loan_scam": {
+   "title": "先收费的假贷款"
+  },
+  "job_scam": {
+   "title": "要求付费的招聘信息"
+  },
+  "investment_scam": {
+   "title": "保证收益或翻倍回报"
+  },
+  "prize_scam": {
+   "title": "虚假中奖/赠品"
+  },
+  "urgency_pressure": {
+   "title": "催促立即行动"
+  },
+  "fake_system_alert": {
+   "title": "虚假“手机中毒”警告"
+  },
+  "credential_request": {
+   "title": "索要PIN、密码或验证码"
+  },
+  "advance_fee": {
+   "title": "先付费后领取的套路"
+  },
+  "impersonated_authority": {
+   "title": "冒充官方机构或运营商"
+  },
+  "wa_takeover_lure": {
+   "title": "WhatsApp账号劫持诱饵"
+  },
+  "wa_fake_app": {
+   "title": "假冒/改版WhatsApp"
+  },
+  "wa_deeplink_abuse": {
+   "title": "可疑的WhatsApp链接"
+  },
+  "wa_group_promo": {
+   "title": "承诺赚钱的群组"
+  }
+ },
+ "ui": {
+  "why_flagged": "为什么被标记？",
+  "what_to_do": "该怎么做"
+ },
+ "_note": "Machine-drafted titles; have a native speaker review before release. Missing keys fall back to English."
+}

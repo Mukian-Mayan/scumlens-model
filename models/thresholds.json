@@ -1,0 +1,7 @@
+{
+  "device": 0.8431,
+  "ensemble": 0.8264,
+  "suspicious": 0.5,
+  "dangerous": 0.85,
+  "target_fpr": 0.01
+}

@@ -1,0 +1,210 @@
+{
+  "rows": 303000,
+  "train": 242800,
+  "test_real": 59643,
+  "split": "GroupShuffleSplit by registered domain, 80/20",
+  "models": {
+    "device_gb": {
+      "overall@0.5": {
+        "n": 59643,
+        "accuracy": 0.9009,
+        "precision": 0.9116,
+        "recall": 0.885,
+        "f1": 0.8981,
+        "roc_auc": 0.9682,
+        "pr_auc": 0.9709,
+        "fpr": 0.0836,
+        "fnr": 0.115
+      },
+      "overall@fpr0.01": {
+        "n": 59643,
+        "accuracy": 0.851,
+        "precision": 0.9857,
+        "recall": 0.7083,
+        "f1": 0.8243,
+        "roc_auc": 0.9682,
+        "pr_auc": 0.9709,
+        "fpr": 0.01,
+        "fnr": 0.2917
+      },
+      "threshold_for_target_fpr": 0.8431,
+      "kind=host_only": {
+        "n": 7567,
+        "positive_rate_flagged": 0.2677,
+        "label_mean": 0.0
+      },
+      "kind=augmented_benign": {
+        "n": 22638,
+        "positive_rate_flagged": 0.0221,
+        "label_mean": 0.0
+      },
+      "kind=full_url": {
+        "n": 20504,
+        "positive_rate_flagged": 0.9055,
+        "label_mean": 1.0
+      },
+      "phishing_path_stripped_recall@0.5": 0.8647
+    },
+    "ensemble_vote": {
+      "overall@0.5": {
+        "n": 59643,
+        "accuracy": 0.9088,
+        "precision": 0.9166,
+        "recall": 0.8969,
+        "f1": 0.9066,
+        "roc_auc": 0.9722,
+        "pr_auc": 0.9741,
+        "fpr": 0.0795,
+        "fnr": 0.1031
+      },
+      "overall@fpr0.01": {
+        "n": 59643,
+        "accuracy": 0.8552,
+        "precision": 0.9859,
+        "recall": 0.7168,
+        "f1": 0.8301,
+        "roc_auc": 0.9722,
+        "pr_auc": 0.9741,
+        "fpr": 0.01,
+        "fnr": 0.2832
+      },
+      "threshold_for_target_fpr": 0.8264,
+      "kind=host_only": {
+        "n": 7567,
+        "positive_rate_flagged": 0.268,
+        "label_mean": 0.0
+      },
+      "kind=augmented_benign": {
+        "n": 22638,
+        "positive_rate_flagged": 0.0165,
+        "label_mean": 0.0
+      },
+      "kind=full_url": {
+        "n": 20504,
+        "positive_rate_flagged": 0.9225,
+        "label_mean": 1.0
+      },
+      "phishing_path_stripped_recall@0.5": 0.8706
+    }
+  },
+  "recall_by_source@0.5": {
+    "phishing_database": 0.8969
+  },
+  "synthetic_regional_recall@0.5_(informational)": 0.9946,
+  "sanity_benign_set": {
+    "device_gb": {
+      "n": 30,
+      "flagged@0.5": 6,
+      "worst": [
+        [
+          "https://docs.python.org/3/library/re.html",
+          0.992
+        ],
+        [
+          "https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster",
+          0.978
+        ],
+        [
+          "https://login.microsoftonline.com/common/oauth2/authorize",
+          0.937
+        ],
+        [
+          "https://accounts.google.com/signin/v2/identifier",
+          0.888
+        ],
+        [
+          "https://www.amazon.com/gp/css/homepage.html",
+          0.841
+        ]
+      ]
+    },
+    "ensemble_vote": {
+      "n": 30,
+      "flagged@0.5": 8,
+      "worst": [
+        [
+          "https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster",
+          0.994
+        ],
+        [
+          "https://login.microsoftonline.com/common/oauth2/authorize",
+          0.959
+        ],
+        [
+          "https://docs.python.org/3/library/re.html",
+          0.953
+        ],
+        [
+          "https://web.whatsapp.com/",
+          0.84
+        ],
+        [
+          "https://accounts.google.com/signin/v2/identifier",
+          0.84
+        ]
+      ]
+    }
+  },
+  "top_features_rf": [
+    [
+      "repeated_chars_host",
+      0.104
+    ],
+    [
+      "url_len",
+      0.0952
+    ],
+    [
+      "path_len",
+      0.0883
+    ],
+    [
+      "tld_risky",
+      0.0707
+    ],
+    [
+      "n_subdomains",
+      0.0656
+    ],
+    [
+      "entropy_path",
+      0.0646
+    ],
+    [
+      "entropy_host",
+      0.0535
+    ],
+    [
+      "avg_label_len",
+      0.0464
+    ],
+    [
+      "letter_ratio_url",
+      0.0457
+    ],
+    [
+      "n_slashes_path",
+      0.0416
+    ],
+    [
+      "path_depth",
+      0.0405
+    ],
+    [
+      "host_len",
+      0.0398
+    ],
+    [
+      "path_has_php_or_html",
+      0.0312
+    ],
+    [
+      "longest_label_len",
+      0.026
+    ],
+    [
+      "n_dots_host",
+      0.0194
+    ]
+  ]
+}

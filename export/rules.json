@@ -1,0 +1,94 @@
+{
+  "_doc": "Regex/keyword rules. Each rule: id, category, weight (0-1, contribution to risk), patterns (case-insensitive regex, any match fires). Explanations live in src/scamguard/locales/*.json keyed by id.",
+  "text_rules": [
+    {"id": "mobile_money_scam", "category": "regional_scam", "weight": 0.45,
+     "patterns": ["m-?pesa[^.\\n]{0,60}(reversal|mistak|wrong number|confirm(ed)? .* ksh|deposit)", "(mtn|airtel)[ -]?(momo|money)[^.\\n]{0,60}(reversal|mistak|wrong|bonus|promo|won)", "i (have )?(mistakenly|accidentally) sent (you )?(ksh|ugx|tsh|usd|\\$)", "(ksh|ugx|tzs|rwf)\\s?[\\d,]{4,}[^.\\n]{0,40}(reverse|return|send back)", "your (mobile money|m-?pesa|momo) (pin|account) (is|has been) (blocked|suspended|locked)"]},
+    {"id": "loan_scam", "category": "regional_scam", "weight": 0.4,
+     "patterns": ["(instant|fast|quick|easy) (cash )?loan[^.\\n]{0,50}(no (collateral|security|crb)|within \\d+ ?(min|minutes))", "(loan|credit) (approved|pre-?approved)[^.\\n]{0,60}(pay|send|deposit)[^.\\n]{0,30}(fee|insurance|processing)", "pay (a |an )?(small )?(processing|insurance|registration|release|clearance) fee", "loan app[^.\\n]{0,40}(contacts|gallery|access)"]},
+    {"id": "job_scam", "category": "regional_scam", "weight": 0.4,
+     "patterns": ["(jobs?|vacanc(y|ies)|recruit\\w*)[^.\\n]{0,60}(dubai|qatar|saudi|kuwait|oman|canada|usa|europe|abroad)[^.\\n]{0,80}(fee|pay|deposit|visa|processing|registration)", "(work from home|data entry)[^.\\n]{0,60}(earn|make)[^.\\n]{0,20}(\\$|usd|ksh|ugx)\\s?\\d{3,}", "(registration|application|medical|visa) fee (is )?(required|payable)"]},
+    {"id": "investment_scam", "category": "regional_scam", "weight": 0.5,
+     "patterns": ["(double|triple|10x|100%) (your )?(money|investment|deposit)", "guaranteed (daily |weekly |monthly )?(returns?|profits?|roi)", "(earn|make) \\d{1,3}% (daily|weekly|per (day|week))", "(forex|crypto|bitcoin|binary)[^.\\n]{0,50}(signal|trading bot|mining)[^.\\n]{0,50}(guaranteed|risk[- ]free)", "(ponzi|pyramid|referral commission)[^.\\n]{0,40}(invest|deposit)"]},
+    {"id": "prize_scam", "category": "lure", "weight": 0.4,
+     "patterns": ["(congratulations|you (have )?(won|been selected|are the winner))[^.\\n]{0,80}(prize|lottery|iphone|cash|gift|reward|voucher|promo)", "claim your (prize|reward|gift|bonus|free)", "(lucky (draw|winner)|spin (to|and) win)"]},
+    {"id": "urgency_pressure", "category": "lure", "weight": 0.15,
+     "patterns": ["(act|respond|reply|verify|pay) (now|immediately|within \\d+ ?(hours?|minutes?|hrs?))", "(account|number|sim|line|card) (will be|has been|is) (suspended|blocked|deactivated|closed|locked)", "last (warning|notice|chance)", "(urgent|immediate) (action|attention) required"]},
+    {"id": "fake_system_alert", "category": "ad_clickthrough", "weight": 0.45,
+     "patterns": ["(your|this) (phone|device|android|iphone|browser|system) (is|has been|may be) (infected|hacked|compromised|damaged)", "\\d+ (viruses|threats|malware) (found|detected)", "(clean|scan|optimi[sz]e|speed up) (your )?(phone|device) now", "battery (is )?(damaged|critical)[^.\\n]{0,30}(install|download)", "(security|system) (alert|warning)[^.\\n]{0,40}(call|install|download)"]},
+    {"id": "credential_request", "category": "phishing", "weight": 0.35,
+     "patterns": ["(enter|confirm|provide|send|share) (your )?(pin|password|otp|one[- ]time (code|password)|cvv|verification code|6[- ]digit code)", "(verify|confirm|update) (your )?(kyc|identity|account details|bank details|national id|nin|bvn)", "(sign|log) ?in to (continue|view|download|unlock)"]},
+    {"id": "advance_fee", "category": "regional_scam", "weight": 0.35,
+     "patterns": ["(inheritance|unclaimed funds?|next of kin)[^.\\n]{0,80}(million|\\$|usd|gbp)", "(release|clearance|customs|delivery) (fee|charges?)[^.\\n]{0,40}(parcel|package|funds|consignment)", "(grant|scholarship|compensation|refund)[^.\\n]{0,60}(pay|send|deposit)[^.\\n]{0,30}(fee|charge|tax)"]},
+    {"id": "impersonated_authority", "category": "phishing", "weight": 0.3,
+     "patterns": ["(ura|kra|nssf|nhif|nira|police|interpol|immigration|central bank|safaricom|mtn uganda|airtel)[^.\\n]{0,60}(fine|arrest|warrant|penalty|refund|unpaid|blocked|suspended|verify)", "(tax|customs|duty) (refund|clearance)[^.\\n]{0,40}(click|link|pay)"]}
+  ],
+  "whatsapp_rules": [
+    {"id": "wa_takeover_lure", "category": "whatsapp", "weight": 0.6,
+     "patterns": ["(send|share|forward|tell me|give me)[^.\\n]{0,30}(whatsapp )?(verification|registration|6[- ]?digit|sms) (code|otp)", "(link|scan)[^.\\n]{0,20}(a )?(new )?device[^.\\n]{0,40}(qr|code|verify|confirm)", "whatsapp[^.\\n]{0,40}(account|number) (will be|is being) (banned|suspended|deleted|expired)", "(verify|confirm|renew)[^.\\n]{0,30}whatsapp[^.\\n]{0,30}(subscription|account|number)", "whatsapp (web )?(qr|linked devices)[^.\\n]{0,40}(scan|login) (here|below|to (verify|continue|claim))"]},
+    {"id": "wa_fake_app", "category": "whatsapp", "weight": 0.55,
+     "host_patterns": ["gb-?whatsapp", "whatsapp-?(gold|plus|pro|prime|business-?apk|update|download|web-?login|verify)", "(yo|fm|ob|aero)-?whatsapp", "whatsap+\\.(?!com$)[a-z]+$"],
+     "path_patterns": ["gbwhatsapp", "whatsapp-?(plus|gold|mod)", "whatsapp.*\\.apk"]},
+    {"id": "wa_deeplink_abuse", "category": "whatsapp", "weight": 0.3,
+     "url_patterns": ["^(whatsapp|intent)://.*(send|chat|link|device)", "^https?://(api\\.whatsapp\\.com/send|wa\\.me/\\d+)[^ ]*[?&]text=[^&]{120,}", "^https?://wa\\.me/\\d+\\?text=.*(code|otp|verify|win|prize|claim|loan|invest)"]},
+    {"id": "wa_group_promo", "category": "whatsapp", "weight": 0.2,
+     "url_patterns": ["^https?://chat\\.whatsapp\\.com/"],
+     "context_patterns": ["(invest|forex|crypto|profit|signal|loan|earn|free data|giveaway|jobs? abroad)"]}
+  ],
+  "html_rules": [
+    {"id": "exfil_telegram_bot", "category": "api_sniff", "weight": 0.7, "patterns": ["api\\.telegram\\.org/bot\\d+:", "t\\.me/[a-z0-9_]+bot"]},
+    {"id": "exfil_discord_webhook", "category": "api_sniff", "weight": 0.65, "patterns": ["discord(app)?\\.com/api/webhooks/\\d+"]},
+    {"id": "exfil_form_service", "category": "api_sniff", "weight": 0.3, "patterns": ["formsubmit\\.co", "formspree\\.io", "getform\\.io", "script\\.google\\.com/macros/s/", "emailjs\\.com", "web3forms\\.com", "sheetdb\\.io", "api\\.sheety\\.co"]},
+    {"id": "clipboard_read", "category": "api_sniff", "weight": 0.3, "patterns": ["navigator\\.clipboard\\.(read|readText)\\s*\\(", "document\\.execCommand\\(['\"]paste"]},
+    {"id": "clipboard_write_hijack", "category": "api_sniff", "weight": 0.4, "patterns": ["navigator\\.clipboard\\.writeText\\s*\\([^)]*(powershell|cmd|curl|wget|0x[0-9a-f]{40}|bc1)", "execCommand\\(['\"]copy['\"]\\)[^;]{0,200}(powershell|mshta|0x[0-9a-f]{40})"]},
+    {"id": "camera_mic_request", "category": "api_sniff", "weight": 0.25, "patterns": ["getUserMedia\\s*\\(", "mediaDevices\\.getDisplayMedia", "webkitSpeechRecognition"]},
+    {"id": "geolocation_request", "category": "api_sniff", "weight": 0.1, "patterns": ["navigator\\.geolocation\\.(getCurrentPosition|watchPosition)"]},
+    {"id": "notification_spam", "category": "ad_clickthrough", "weight": 0.35, "patterns": ["Notification\\.requestPermission\\s*\\(", "pushManager\\.subscribe\\s*\\(", "(onesignal|pushengage|propellerads|pushwoosh|webpushr)"]},
+    {"id": "obfuscated_js", "category": "api_sniff", "weight": 0.35, "patterns": ["eval\\s*\\(\\s*(atob|unescape|String\\.fromCharCode)", "document\\.write\\s*\\(\\s*unescape", "\\\\x[0-9a-f]{2}(\\\\x[0-9a-f]{2}){25,}", "(_0x[0-9a-f]{4,}\\b.*){12,}", "new Function\\s*\\(\\s*atob"]},
+    {"id": "forced_redirect", "category": "ad_clickthrough", "weight": 0.35, "patterns": ["<meta[^>]+http-equiv=['\"]?refresh['\"]?[^>]+url=", "window\\.location(\\.href|\\.replace)?\\s*=\\s*['\"]https?://", "top\\.location(\\.href)?\\s*="]},
+    {"id": "popup_loop", "category": "ad_clickthrough", "weight": 0.4, "patterns": ["(window\\.open\\s*\\([^)]*\\)[^;]*;[\\s\\S]{0,200}){3,}", "onbeforeunload\\s*=", "history\\.pushState\\s*\\([^)]*\\)[\\s\\S]{0,120}(popstate|back)"]},
+    {"id": "hidden_iframe", "category": "ad_clickthrough", "weight": 0.35, "patterns": ["<iframe[^>]+(width|height)=['\"]?[01]['\"]?[ >]", "<iframe[^>]+style=['\"][^'\"]*(display:\\s*none|visibility:\\s*hidden|opacity:\\s*0)"]},
+    {"id": "app_intent_scheme", "category": "ad_clickthrough", "weight": 0.35, "patterns": ["intent://[^'\" ]+#Intent;", "market://details\\?id=", "(href|location)\\s*=\\s*['\"](sms|tel|mailto):"]},
+    {"id": "ws_ip_connection", "category": "api_sniff", "weight": 0.35, "patterns": ["new WebSocket\\s*\\(\\s*['\"]wss?://\\d{1,3}(\\.\\d{1,3}){3}"]},
+    {"id": "credential_form_fake_brand", "category": "phishing", "weight": 0.3, "patterns": ["<input[^>]+type=['\"]password['\"]"], "needs_brand_mismatch": true}
+  ],
+  "file_rules": {
+    "critical_ext": ["apk", "xapk", "apkm", "exe", "scr", "bat", "cmd", "msi", "jar", "vbs", "vbe", "ps1", "lnk", "hta", "wsf", "dll", "cpl", "reg", "com", "pif", "sh", "elf", "bin", "appimage", "dex"],
+    "macro_ext": ["docm", "xlsm", "pptm", "dotm", "xlam", "xlsb", "one"],
+    "archive_ext": ["zip", "rar", "7z", "tar", "gz", "iso", "img", "cab", "arj", "vhd"],
+    "document_ext": ["pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx", "txt", "rtf", "jpg", "jpeg", "png", "gif", "mp3", "mp4", "csv"],
+    "known_safe_ext": ["pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx", "txt", "rtf", "jpg", "jpeg", "png", "gif", "webp", "mp3", "mp4", "m4a", "wav", "csv", "json", "xml", "md", "html", "htm", "css", "js", "svg", "ttf", "woff", "woff2"],
+    "bidi_chars": ["\u202e", "\u202d", "\u202a", "\u202b", "\u2066", "\u2067"]
+  },
+  "oauth_rules": {
+    "risky_scopes": ["mail.read", "mail.readwrite", "mail.send", "files.readwrite.all", "full_access", "offline_access", "https://mail.google.com/", "contacts.read", "directory.readwrite.all", "user_impersonation", "gmail.modify", "drive", "read_inbox", "pages_manage_posts", "whatsapp_business_management", "instagram_manage_messages"],
+    "known_auth_hosts": ["accounts.google.com", "login.microsoftonline.com", "login.live.com", "www.facebook.com", "m.facebook.com", "appleid.apple.com", "github.com", "api.twitter.com", "twitter.com", "x.com", "www.linkedin.com", "discord.com", "slack.com", "login.salesforce.com", "oauth.vk.com", "id.twitch.tv", "www.dropbox.com", "api.instagram.com", "www.instagram.com"]
+  },
+  "app_rules": {
+    "dangerous_permissions": {
+      "android.permission.BIND_ACCESSIBILITY_SERVICE": 0.35,
+      "android.permission.BIND_DEVICE_ADMIN": 0.3,
+      "android.permission.SYSTEM_ALERT_WINDOW": 0.2,
+      "android.permission.REQUEST_INSTALL_PACKAGES": 0.2,
+      "android.permission.READ_SMS": 0.25,
+      "android.permission.RECEIVE_SMS": 0.2,
+      "android.permission.SEND_SMS": 0.2,
+      "android.permission.READ_CALL_LOG": 0.15,
+      "android.permission.READ_CONTACTS": 0.1,
+      "android.permission.MANAGE_EXTERNAL_STORAGE": 0.15,
+      "android.permission.BIND_NOTIFICATION_LISTENER_SERVICE": 0.25,
+      "android.permission.QUERY_ALL_PACKAGES": 0.1,
+      "android.permission.RECORD_AUDIO": 0.1,
+      "android.permission.BIND_VPN_SERVICE": 0.2
+    },
+    "combos": [
+      {"id": "app_perm_combo_sms_overlay", "needs": ["android.permission.READ_SMS", "android.permission.SYSTEM_ALERT_WINDOW"], "weight": 0.4},
+      {"id": "app_perm_combo_accessibility_overlay", "needs": ["android.permission.BIND_ACCESSIBILITY_SERVICE", "android.permission.SYSTEM_ALERT_WINDOW"], "weight": 0.5},
+      {"id": "app_perm_combo_otp_stealer", "needs": ["android.permission.RECEIVE_SMS", "android.permission.READ_CONTACTS", "android.permission.INTERNET"], "weight": 0.3}
+    ],
+    "trusted_installers": ["com.android.vending", "com.sec.android.app.samsungapps", "com.huawei.appmarket", "com.xiaomi.mipicks", "com.amazon.venezia"]
+  },
+  "usb_rules": {
+    "classes": {"hid": 3, "mass_storage": 8, "cdc_comm": 2, "cdc_data": 10, "wireless": 224, "vendor": 255, "audio": 1},
+    "note": "Class-based heuristics only. We do not ship VID:PID blocklists because they are trivially spoofed."
+  }
+}

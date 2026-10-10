@@ -1,0 +1,99 @@
+{
+ "lang": "hi",
+ "verdicts": {
+  "low_risk": "कम जोखिम",
+  "suspicious": "संदिग्ध",
+  "dangerous": "खतरनाक"
+ },
+ "findings": {
+  "ip_host": {
+   "title": "लिंक सीधे IP पता इस्तेमाल करता है"
+  },
+  "at_symbol": {
+   "title": "लिंक में छिपी '@' चाल"
+  },
+  "brand_impersonation": {
+   "title": "जानी-मानी कंपनी की नकल"
+  },
+  "free_host": {
+   "title": "मुफ़्त साइट पर होस्ट किया गया"
+  },
+  "shortener": {
+   "title": "छोटा लिंक गंतव्य छिपाता है"
+  },
+  "risky_tld": {
+   "title": "सस्ता डोमेन जिसका दुरुपयोग अधिक होता है"
+  },
+  "lookalike_chars": {
+   "title": "मिलते-जुलते अक्षरों का धोखा"
+  },
+  "many_subdomains": {
+   "title": "असामान्य रूप से कई सबडोमेन"
+  },
+  "scam_keywords": {
+   "title": "बहुत सारे ठगी वाले शब्द"
+  },
+  "risky_download": {
+   "title": "लिंक जोखिम भरी फ़ाइल तक ले जाता है"
+  },
+  "no_https": {
+   "title": "कनेक्शन एन्क्रिप्टेड नहीं (HTTPS नहीं)"
+  },
+  "very_long_url": {
+   "title": "बहुत लंबा और उलझा लिंक"
+  },
+  "redirect_param": {
+   "title": "लिंक के अंदर दूसरा लिंक"
+  },
+  "odd_port": {
+   "title": "असामान्य नेटवर्क पोर्ट"
+  },
+  "mobile_money_scam": {
+   "title": "मोबाइल मनी ठगी की भाषा"
+  },
+  "loan_scam": {
+   "title": "अग्रिम शुल्क वाला नकली लोन"
+  },
+  "job_scam": {
+   "title": "पैसे माँगने वाली नौकरी का ऑफ़र"
+  },
+  "investment_scam": {
+   "title": "गारंटीशुदा या दोगुना मुनाफ़ा"
+  },
+  "prize_scam": {
+   "title": "नकली इनाम / लॉटरी"
+  },
+  "urgency_pressure": {
+   "title": "तुरंत कार्रवाई का दबाव"
+  },
+  "fake_system_alert": {
+   "title": "नकली 'फ़ोन में वायरस' चेतावनी"
+  },
+  "credential_request": {
+   "title": "PIN, पासवर्ड या OTP माँगता है"
+  },
+  "advance_fee": {
+   "title": "पाने के लिए पहले भुगतान का पैटर्न"
+  },
+  "impersonated_authority": {
+   "title": "अधिकारी या सेवा-प्रदाता का रूप धरना"
+  },
+  "wa_takeover_lure": {
+   "title": "WhatsApp अकाउंट हड़पने का जाल"
+  },
+  "wa_fake_app": {
+   "title": "नकली / बदला हुआ WhatsApp"
+  },
+  "wa_deeplink_abuse": {
+   "title": "संदिग्ध WhatsApp लिंक"
+  },
+  "wa_group_promo": {
+   "title": "पैसे के वादे वाला ग्रुप"
+  }
+ },
+ "ui": {
+  "why_flagged": "यह क्यों चिह्नित हुआ?",
+  "what_to_do": "क्या करें"
+ },
+ "_note": "Machine-drafted titles; have a native speaker review before release. Missing keys fall back to English."
+}
